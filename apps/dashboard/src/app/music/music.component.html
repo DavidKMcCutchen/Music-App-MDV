@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="col-50" layout="row" layout-align="center center">
+    <music-app-music-list
+      [songs]="allSongs$ | async"
+      (selected)="selectSong($event)"
+      (deleted)="deleteSong($event)"
+    ></music-app-music-list>  
+  </div>
+  <div class="col-50" layout="row" layout-align="center center">
+    <music-app-music-details
+      [song]="selectedSong$ | async"
+      (saved)="saveSong($event)"
+      (cancelled)="cancel()"
+      [form]="form"
+    ></music-app-music-details>  
+  </div>
+</div>

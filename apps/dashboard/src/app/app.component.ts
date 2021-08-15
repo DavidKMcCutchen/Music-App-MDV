@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Message } from '@music-app/api-interfaces';
+
 
 @Component({
   selector: 'music-app-root',
@@ -8,6 +7,9 @@ import { Message } from '@music-app/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  title= 'Songs';
+  links= [
+    {path: '', icon: 'home', title: 'Home'},
+    {path: 'songs', icon: 'view_list', title: 'Songs'}
+  ]
 }

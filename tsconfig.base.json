@@ -15,7 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@music-app/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@music-app/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@music-app/core-data": ["libs/core-data/src/index.ts"],
+      "@music-app/material": ["libs/material/src/index.ts"],
+      "@music-app/ui-login": ["libs/ui-login/src/index.ts"],
+      "@music-app/core-state": ["libs/core-state/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
